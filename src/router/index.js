@@ -23,7 +23,7 @@ const routes = [
         component: () => import('views/home'),
         meta: {
             keepAlive: true, // 不需要缓存
-            title: '交易统计'
+            title: '首页'
         }
     },
     {
