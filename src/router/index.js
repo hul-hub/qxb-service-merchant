@@ -27,6 +27,16 @@ const routes = [
         }
     },
     {
+        path: '/merchant',
+        name: 'Merchant',
+        // () => 按需加载
+        component: () => import('views/merchant'),
+        meta: {
+            keepAlive: true, // 不需要缓存
+            title: '商户'
+        }
+    },
+    {
         path: '/login',
         name: 'Login',
         component: () => import('views/login'),

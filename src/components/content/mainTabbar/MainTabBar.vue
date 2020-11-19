@@ -5,9 +5,9 @@
       <img slot="active-icon" src="~assets/img/tabbar/home_active.svg" alt="">
       <!-- <div slot="text">首页</div> -->
     </tab-bar-item>
-    <tab-bar-item link="/category">
-      <img slot="icon" src="~assets/img/tabbar/category.svg" alt="">
-      <img slot="active-icon" src="~assets/img/tabbar/category_active.svg" alt="">
+    <tab-bar-item link="/merchant">
+      <img slot="icon" src="~assets/img/tabbar/merchant.svg" alt="">
+      <img slot="active-icon" src="~assets/img/tabbar/merchant_active.svg" alt="">
       <!-- <div slot="text">分类</div> -->
     </tab-bar-item>
   </tab-bar>
