@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-const Home = () => import('@/views/home')
-
 const originalPush = VueRouter.prototype.push
 
 VueRouter.prototype.push = function push(location) {
@@ -21,7 +19,16 @@ const routes = [
     {
         path: '/home',
         name: 'Home',
-        component: Home,
+        // () => 按需加载
+        component: () => import('views/home'),
+        meta: {
+            keepAlive: false // 不需要缓存
+        }
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: () => import('views/login'),
         meta: {
             keepAlive: false // 不需要缓存
         }
