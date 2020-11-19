@@ -22,7 +22,8 @@ const routes = [
         // () => 按需加载
         component: () => import('views/home'),
         meta: {
-            keepAlive: false // 不需要缓存
+            keepAlive: true, // 不需要缓存
+            title: '交易统计'
         }
     },
     {
@@ -30,7 +31,8 @@ const routes = [
         name: 'Login',
         component: () => import('views/login'),
         meta: {
-            keepAlive: false // 不需要缓存
+            keepAlive: false, // 不需要缓存
+            title: '登录'
         }
     },
 ]
