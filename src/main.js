@@ -8,6 +8,14 @@ import store from './store'
 //全局样式
 import './assets/css/base.css';
 
+// 主要的ui框架
+import 'vant/lib/index.css'
+import {
+  DatetimePicker,
+  Popup,
+} from 'vant'
+Vue.use(DatetimePicker)
+  .use(Popup)
 
 
 import './permission' //权限控制
