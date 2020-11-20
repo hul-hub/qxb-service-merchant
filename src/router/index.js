@@ -37,6 +37,26 @@ const routes = [
         }
     },
     {
+        path: '/merchantAdd',
+        name: 'MerchantAdd',
+        // () => 按需加载
+        component: () => import('views/merchant/add'),
+        meta: {
+            keepAlive: false, // 不需要缓存
+            title: '商户新增'
+        }
+    },
+    {
+        path: '/contain',
+        name: 'Contain',
+        // () => 按需加载
+        component: () => import('views/merchant/add/Contain.vue'),
+        meta: {
+            keepAlive: false, // 不需要缓存
+            title: '商户新增'
+        }
+    },
+    {
         path: '/login',
         name: 'Login',
         component: () => import('views/login'),

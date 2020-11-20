@@ -20,3 +20,10 @@
   font-size: 14px;
   border-radius: 4px;
 }
+.btn-con {
+  display: flex;
+  justify-content: center;
+}
+.next-btn {
+  width: 160px;
+}

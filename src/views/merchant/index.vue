@@ -2,7 +2,7 @@
   <div class="container merchant-container">
     <div class="head-con">
       <img src="~assets/img/content/add.svg" alt="" />
-      <button class="btn add-btn">新增</button>
+      <button class="btn add-btn" @click="handleAdd">新增</button>
     </div>
     <div class="con-con">
       <div class="con-item">
@@ -58,7 +58,11 @@ export default {
   data() {
     return {}
   },
-  methods: {},
+  methods: {
+    handleAdd() {
+      this.$router.push('/merchantAdd')
+    },
+  },
   created() {},
 }
 </script>
