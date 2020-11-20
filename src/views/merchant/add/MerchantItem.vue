@@ -1,9 +1,21 @@
 <template>
   <div class="merchant-item-container">
-    <div></div>
-    <div class="btn-con">
-      <button class="btn next-btn">下一步</button>
-    </div>
+    <van-form @submit="onSubmit">
+      <van-field
+        v-model="username"
+        label="用户名"
+        :rules="[{ required: true, message: '请填写用户名' }]"
+      />
+      <van-field
+        v-model="password"
+        type="password"
+        label="密码"
+        :rules="[{ required: true, message: '请填写密码' }]"
+      />
+      <div class="btn-con" style="margin: 16px">
+        <button class="btn next-btn" type="submit">下一步</button>
+      </div>
+    </van-form>
   </div>
 </template>
 
@@ -25,9 +37,16 @@ export default {
         address: '-', //详细地址
         phone: '-', //客服电话
       },
+      username: '',
+      password: '',
     }
   },
-  methods: {},
+  methods: {
+    onSubmit(values) {
+      console.log('submit', values)
+      this.$emit('childMerchantFun', this.serviceMerchantItem)
+    },
+  },
   created() {},
 }
 </script>

@@ -15,9 +15,15 @@ import 'vant/lib/index.css'
 import {
   DatetimePicker,
   Popup,
+  Field,
+  Form,
+  Uploader,
 } from 'vant'
 Vue.use(DatetimePicker)
   .use(Popup)
+  .use(Form)
+  .use(Field)
+  .use(Uploader)
 
 
 import './permission' //权限控制

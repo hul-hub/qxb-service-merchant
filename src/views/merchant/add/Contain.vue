@@ -1,17 +1,20 @@
 <template>
   <div class="merchant-item-container">
     <!-- 商户 -->
-    <merchant-item v-show="active === '1'"></merchant-item>
+    <merchant-item
+      v-show="active === 1"
+      @childMerchantFun="childMerchantFun"
+    ></merchant-item>
     <!-- 营业 -->
-    <business v-show="active === '2'"></business>
+    <business v-show="active === 2"></business>
     <!-- 经营 -->
-    <shop v-show="active === '3'"></shop>
+    <shop v-show="active === 3"></shop>
     <!-- 法人 -->
-    <legal v-show="active === '4'"></legal>
+    <legal v-show="active === 4"></legal>
     <!-- 开户 -->
-    <account v-show="active === '5'"></account>
+    <account v-show="active === 5"></account>
     <!-- 联系人 -->
-    <contacts v-show="active === '6'"></contacts>
+    <contacts v-show="active === 6"></contacts>
   </div>
 </template>
 
@@ -34,10 +37,14 @@ export default {
   },
   data() {
     return {
-      active: '1',
+      active: 1,
     }
   },
-  methods: {},
+  methods: {
+    childMerchantFun() {
+      this.active++
+    },
+  },
   created() {},
 }
 </script>
