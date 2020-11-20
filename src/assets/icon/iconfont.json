@@ -1,0 +1,37 @@
+{
+  "id": "2181348",
+  "name": "game-900",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "游戏官网项目",
+  "glyphs": [
+    {
+      "icon_id": "15907689",
+      "name": "left",
+      "font_class": "left",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "15907697",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "959127",
+      "name": "左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "17979026",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}

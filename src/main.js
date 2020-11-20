@@ -7,6 +7,8 @@ import store from './store'
 
 //全局样式
 import './assets/css/base.css';
+// 阿里矢量图标库
+import '@/assets/icon/iconfont.css'
 
 // 主要的ui框架
 import 'vant/lib/index.css'
