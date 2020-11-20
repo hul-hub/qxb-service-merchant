@@ -197,25 +197,7 @@ export default {
   margin-left: 1rem;
   color: #409eff;
 }
-.btn {
-  display: inline-block;
-  line-height: 1;
-  white-space: nowrap;
-  cursor: pointer;
-  background-color: #409eff;
-  border-color: #409eff;
-  border: 1px solid #409eff;
-  /* color: #606266; */
-  text-align: center;
-  box-sizing: border-box;
-  outline: none;
-  margin: 0;
-  transition: 0.1s;
-  font-weight: 500;
-  padding: 4px 14px;
-  font-size: 14px;
-  border-radius: 4px;
-}
+
 .time-container {
   height: 24px;
   line-height: 24px;

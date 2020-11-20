@@ -1,5 +1,5 @@
 <template>
-  <div class="login-container">
+  <div class="container login-container">
     <div class="bind-login">
       <div class="logo-contain"></div>
       <form
