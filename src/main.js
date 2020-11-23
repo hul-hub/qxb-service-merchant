@@ -18,12 +18,14 @@ import {
   Field,
   Form,
   Uploader,
+  Picker,
 } from 'vant'
 Vue.use(DatetimePicker)
   .use(Popup)
   .use(Form)
   .use(Field)
   .use(Uploader)
+  .use(Picker)
 
 
 import './permission' //权限控制

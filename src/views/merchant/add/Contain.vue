@@ -41,8 +41,9 @@ export default {
     }
   },
   methods: {
-    childMerchantFun() {
+    childMerchantFun(item) {
       this.active++
+      console.log(item);
     },
   },
   created() {},
