@@ -89,7 +89,6 @@ export default {
         if (ser.value === this.serviceMerchantItem.serprotype) return ser
       })
       this.serviceMerchantItem.serprotypeP = result[0].label
-      // console.log(result)
     },
     onSubmit(values) {
       this.$emit('childMerchantFun', this.serviceMerchantItem)
