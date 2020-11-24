@@ -15,7 +15,10 @@
     <!-- 法人 -->
     <legal @childLegalFun="childLegalFun" v-show="active === 4"></legal>
     <!-- 开户 -->
-    <account v-show="active === 5"></account>
+    <account
+      @childAccountFun="childAccountFun(arguments)"
+      v-show="active === 5"
+    ></account>
     <!-- 联系人 -->
     <contacts v-show="active === 6"></contacts>
   </div>
@@ -40,7 +43,7 @@ export default {
   },
   data() {
     return {
-      active: 4,
+      active: 5,
     }
   },
   methods: {
@@ -62,6 +65,16 @@ export default {
     childLegalFun(item) {
       this.active++
       console.log(item)
+    },
+    // 开户信息
+    childAccountFun(arg) {
+      if (arg[1] === 2) {
+        this.active--
+      } else {
+        this.active++
+      }
+
+      console.log(arg)
     },
   },
   created() {},

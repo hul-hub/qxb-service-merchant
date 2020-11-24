@@ -26,5 +26,11 @@
   padding-bottom: 20px;
 }
 .next-btn {
-  width: 160px;
+  /* width: 160px; */
+  margin-left: 20px;
+}
+.pre-btn {
+  background-color: #ffffff;
+  border-color: #409eff;
+  border: 1px solid #409eff;
 }
