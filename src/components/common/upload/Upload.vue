@@ -10,7 +10,7 @@
             </div>
           </van-uploader>
           <div class="upload-detail">
-            <span>{{label}}，只支持png、jpg格式，小于1M</span>
+            <span>{{ label }}，只支持png、jpg格式，小于1M</span>
           </div>
         </div>
       </div>
@@ -24,6 +24,9 @@ import uploadIcon from 'assets/img/content/upload.png'
 export default {
   name: 'Upload',
   props: {
+    value: {
+      default: '',
+    },
     label: {
       type: String,
       required: true,
@@ -32,7 +35,7 @@ export default {
   },
   data() {
     return {
-      imgUrl: '',
+      imgUrl: this.value,
       uploadIcon: uploadIcon,
     }
   },
@@ -40,7 +43,8 @@ export default {
   methods: {
     // 返回布尔值
     beforeRead(file) {
-      if (file.type !== 'image/jpeg') {
+      console.log(file);
+      if (file.type !== 'image/jpeg' && file.type !== 'image/png') {
         return false
       }
       return true
@@ -56,7 +60,7 @@ export default {
         console.log(res)
         let data = res
         this.imgUrl = data.extend.url
-        this.$emit('childUpload',this.imgUrl)
+        this.$emit('childUpload', this.imgUrl)
       })
     },
   },

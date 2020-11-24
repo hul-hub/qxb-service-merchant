@@ -23,6 +23,7 @@
 .btn-con {
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 .next-btn {
   width: 160px;

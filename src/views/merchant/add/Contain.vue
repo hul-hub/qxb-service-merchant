@@ -11,9 +11,9 @@
       v-show="active === 2"
     ></business>
     <!-- 经营 -->
-    <shop v-show="active === 3"></shop>
+    <shop @childShopFun="childShopFun" v-show="active === 3"></shop>
     <!-- 法人 -->
-    <legal v-show="active === 4"></legal>
+    <legal @childLegalFun="childLegalFun" v-show="active === 4"></legal>
     <!-- 开户 -->
     <account v-show="active === 5"></account>
     <!-- 联系人 -->
@@ -40,7 +40,7 @@ export default {
   },
   data() {
     return {
-      active: 2,
+      active: 4,
     }
   },
   methods: {
@@ -48,7 +48,18 @@ export default {
       this.active++
       console.log(item)
     },
+    // 营业信息
     childBusinessFun(item) {
+      this.active++
+      console.log(item)
+    },
+    // 经营信息
+    childShopFun(item) {
+      this.active++
+      console.log(item)
+    },
+    // 法人信息
+    childLegalFun(item) {
       this.active++
       console.log(item)
     },

@@ -41,12 +41,15 @@ export default {
   methods: {
     businesslicenesFun(value) {
       console.log(value)
+      this.businessItem.businesslicense = value
     },
     taximgFun(value) {
       console.log(value)
+      this.businessItem.taximg = value
     },
     organizationimgFun(value) {
       console.log(value)
+      this.businessItem.organizationimg = value
     },
     onSubmit(values) {
       this.$emit('childBusinessFun', this.businessItem)
