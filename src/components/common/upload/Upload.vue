@@ -10,7 +10,7 @@
             </div>
           </van-uploader>
           <div class="upload-detail">
-            <span>营业执照，只支持png、jpg格式，小于1M</span>
+            <span>{{label}}，只支持png、jpg格式，小于1M</span>
           </div>
         </div>
       </div>
@@ -23,7 +23,13 @@ import { uploadImg } from 'network/merchant'
 import uploadIcon from 'assets/img/content/upload.png'
 export default {
   name: 'Upload',
-  props: {},
+  props: {
+    label: {
+      type: String,
+      required: true,
+      default: '选择图片',
+    },
+  },
   data() {
     return {
       imgUrl: '',
@@ -50,6 +56,7 @@ export default {
         console.log(res)
         let data = res
         this.imgUrl = data.extend.url
+        this.$emit('childUpload',this.imgUrl)
       })
     },
   },

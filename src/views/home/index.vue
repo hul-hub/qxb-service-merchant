@@ -70,7 +70,7 @@
         <van-datetime-picker
           v-model="currentDate"
           type="date"
-          title="选择年月日"
+          title="年月日"
           :min-date="minDate"
           :max-date="maxDate"
           @cancel="startShow = false"
@@ -81,7 +81,7 @@
         <van-datetime-picker
           v-model="currentDate"
           type="date"
-          title="选择年月日"
+          title="年月日"
           :min-date="minDate"
           :max-date="maxDate"
           @cancel="endShow = false"

@@ -2,11 +2,14 @@
   <div class="merchant-item-container">
     <!-- 商户 -->
     <merchant-item
-      v-show="active === 1"
       @childMerchantFun="childMerchantFun"
+      v-show="active === 1"
     ></merchant-item>
     <!-- 营业 -->
-    <business v-show="active === 2"></business>
+    <business
+      @childBusinessFun="childBusinessFun"
+      v-show="active === 2"
+    ></business>
     <!-- 经营 -->
     <shop v-show="active === 3"></shop>
     <!-- 法人 -->
@@ -37,13 +40,17 @@ export default {
   },
   data() {
     return {
-      active: 1,
+      active: 2,
     }
   },
   methods: {
     childMerchantFun(item) {
       this.active++
-      console.log(item);
+      console.log(item)
+    },
+    childBusinessFun(item) {
+      this.active++
+      console.log(item)
     },
   },
   created() {},
