@@ -7,20 +7,26 @@
     ></merchant-item>
     <!-- 营业 -->
     <business
-      @childBusinessFun="childBusinessFun"
+      @childBusinessFun="childBusinessFun(arguments)"
       v-show="active === 2"
     ></business>
     <!-- 经营 -->
-    <shop @childShopFun="childShopFun" v-show="active === 3"></shop>
+    <shop @childShopFun="childShopFun(arguments)" v-show="active === 3"></shop>
     <!-- 法人 -->
-    <legal @childLegalFun="childLegalFun" v-show="active === 4"></legal>
+    <legal
+      @childLegalFun="childLegalFun(arguments)"
+      v-show="active === 4"
+    ></legal>
     <!-- 开户 -->
     <account
       @childAccountFun="childAccountFun(arguments)"
       v-show="active === 5"
     ></account>
     <!-- 联系人 -->
-    <contacts v-show="active === 6"></contacts>
+    <contacts
+      @childContactsFun="childContactsFun(arguments)"
+      v-show="active === 6"
+    ></contacts>
   </div>
 </template>
 
@@ -43,7 +49,7 @@ export default {
   },
   data() {
     return {
-      active: 5,
+      active: 1,
     }
   },
   methods: {
@@ -52,19 +58,31 @@ export default {
       console.log(item)
     },
     // 营业信息
-    childBusinessFun(item) {
-      this.active++
-      console.log(item)
+    childBusinessFun(arg) {
+      if (arg[1] === 2) {
+        this.active--
+      } else {
+        this.active++
+      }
+      console.log(arg)
     },
     // 经营信息
-    childShopFun(item) {
-      this.active++
-      console.log(item)
+    childShopFun(arg) {
+      if (arg[1] === 2) {
+        this.active--
+      } else {
+        this.active++
+      }
+      console.log(arg)
     },
     // 法人信息
-    childLegalFun(item) {
-      this.active++
-      console.log(item)
+    childLegalFun(arg) {
+      if (arg[1] === 2) {
+        this.active--
+      } else {
+        this.active++
+      }
+      console.log(arg)
     },
     // 开户信息
     childAccountFun(arg) {
@@ -73,8 +91,14 @@ export default {
       } else {
         this.active++
       }
-
       console.log(arg)
+    },
+    // 联系人信息
+    childContactsFun(arg) {
+      if (arg[1] === 2) {
+        this.active--
+      } else {
+      }
     },
   },
   created() {},

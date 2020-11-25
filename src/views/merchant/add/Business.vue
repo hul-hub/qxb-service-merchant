@@ -10,6 +10,7 @@
       <upload @childUpload="taximgFun" label="税务登记证"></upload>
       <upload @childUpload="organizationimgFun" label="组织机构代码证"></upload>
       <div class="btn-con" style="margin: 16px">
+        <button class="btn pre-btn" @click="preTab">上一步</button>
         <button class="btn next-btn" type="submit">下一步</button>
       </div>
     </van-form>
@@ -52,7 +53,11 @@ export default {
       this.businessItem.organizationimg = value
     },
     onSubmit(values) {
-      this.$emit('childBusinessFun', this.businessItem)
+      this.$emit('childBusinessFun', this.businessItem, 1)
+    },
+    preTab() {
+      console.log(11111111);
+      this.$emit('childBusinessFun', this.businessItem, 2)
     },
   },
   created() {},

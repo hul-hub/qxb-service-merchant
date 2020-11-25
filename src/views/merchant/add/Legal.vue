@@ -22,6 +22,7 @@
       <upload @childUpload="idfrontimgFun" label="身份证正面"></upload>
       <upload @childUpload="idbackimgFun" label="身份证反面"></upload>
       <div class="btn-con" style="margin: 16px">
+        <button class="btn pre-btn" @click="preTab">上一步</button>
         <button class="btn next-btn" type="submit">下一步</button>
       </div>
     </van-form>
@@ -77,7 +78,10 @@ export default {
       this.legalItem.idcodetype = value
     },
     onSubmit(values) {
-      this.$emit('childLegalFun', this.shopItem)
+      this.$emit('childLegalFun', this.legalItem, 1)
+    },
+    preTab() {
+      this.$emit('childLegalFun', this.legalItem, 2)
     },
   },
   created() {},
