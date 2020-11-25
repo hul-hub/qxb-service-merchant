@@ -50,7 +50,9 @@
         label="其他补充材料"
       ></upload>
       <div class="btn-con" style="margin: 16px">
-        <button class="btn pre-btn" type="button" @click="preTab">上一步</button>
+        <button class="btn pre-btn" type="button" @click="preTab">
+          上一步
+        </button>
         <button class="btn next-btn" type="submit">下一步</button>
       </div>
     </van-form>
@@ -81,20 +83,20 @@ export default {
         businessname: '', //经营名称
         merchanttype: '', // 商户类型
         merchanttypeP: '',
-        onebusinesstype: '', //行业类型
-        twobusinesstype: '', //行业类型
-        businesstype: '', //行业类型
+        onebusinesstype: '-', //行业类型
+        twobusinesstype: '-', //行业类型
+        businesstype: '-', //行业类型
         bodyimg: '', //门头照
         storecashierphoto: '', // 收银台照片
         businessimg: '', // 内部经营图片链接
         accountopenimg: '', // 	开户许可证图片链接
         specialbusinessimg: '', // 	特殊行业许可证
         otherimg1: '', // 	其它材料
-        serproagreementimg: '', // 	商户协议
+        serproagreementimg: '-', // 	商户协议
         serproagreementimg1: '', // 	商户协议
-        serproagreementimg2: '', // 	商户协议
-        serproagreementimg3: '', // 	商户协议
-        serproagreementimg4: '', // 	商户协议
+        serproagreementimg2: '-', // 	商户协议
+        serproagreementimg3: '-', // 	商户协议
+        serproagreementimg4: '-', // 	商户协议
       },
       showPicker: false,
       merchanttypeList: [
@@ -146,11 +148,11 @@ export default {
       this.shopItem.serproagreementimg1 = value
     },
     onSubmit(values) {
-      console.log(33333333333);
+      console.log(33333333333)
       this.$emit('childShopFun', this.shopItem, 1)
     },
     preTab() {
-      console.log(222222222);
+      console.log(222222222)
       this.$emit('childShopFun', this.shopItem, 2)
     },
   },

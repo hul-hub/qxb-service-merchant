@@ -20,7 +20,9 @@
         :rules="[{ required: true, message: '请填写联系人邮箱' }]"
       />
       <div class="btn-con" style="margin: 16px">
-        <button class="btn pre-btn" type="button" @click="preTab">上一步</button>
+        <button class="btn pre-btn" type="button" @click="preTab">
+          上一步
+        </button>
         <button class="btn next-btn" type="submit">下一步</button>
       </div>
     </van-form>
@@ -49,14 +51,13 @@ export default {
         contactstypeP: '',
         mobile: '', //联系人手机号
         email: '', //联系人邮箱
-        contactsname: '', //联系人姓名
-        idcodetype: '', //证件类型
-        idcode: '', //证件号码
-        idvaliddate: [],
-        idvalidstartdate: '',
-        idvalidenddate: '',
-        conidfrontimg: '', //身份证正面链接
-        conidbackimg: '', //身份证反面链接
+        contactsname: '-', //联系人姓名
+        idcodetype: '-', //证件类型
+        idcode: '-', //证件号码
+        idvalidstartdate: '-',
+        idvalidenddate: '-',
+        conidfrontimg: '-', //身份证正面链接
+        conidbackimg: '-', //身份证反面链接
       },
       showPicker: false,
       contactstypeList: [

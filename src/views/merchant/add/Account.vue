@@ -80,7 +80,9 @@
         label="银行卡正面"
       ></upload>
       <div class="btn-con" style="margin: 16px">
-        <button class="btn pre-btn" type="button" @click="preTab">上一步</button>
+        <button class="btn pre-btn" type="button" @click="preTab">
+          上一步
+        </button>
         <button class="btn next-btn" type="submit">下一步</button>
       </div>
     </van-form>
@@ -176,17 +178,17 @@ export default {
         idcardtype: '', //	持卡人证件类型
         idcardtypeP: '',
         idcard: '', //	证件编号
-        bcvalidstartdate: '', //
-        bcvalidenddate: '',
         accountcode: '', // 银行账号
         tel: '', // 银行预留手机号
         address: '', // 持卡人地址
         accountfrontimg: '', // 银行卡正面照
-        accountbackimg: '', // 银行卡反面照
-        signauthletterphoto: '', // 签约授权书
-        settleauthletterphoto: '', // 结算授权函图片
-        settleauthidcardfront: '', // 结算授权人身份证正面
-        settleauthidcardback: '', // 结算授权人身份证反面
+        accountbackimg: '-', // 银行卡反面照
+        bcvalidstartdate: '-', //
+        bcvalidenddate: '-',
+        signauthletterphoto: '-', // 签约授权书
+        settleauthletterphoto: '-', // 结算授权函图片
+        settleauthidcardfront: '-', // 结算授权人身份证正面
+        settleauthidcardback: '-', // 结算授权人身份证反面
       },
       // 当账号类型选择（对公、对私-法人）这两种情况，持卡
       //人证件类型、证件编号、证件有效期、持卡人地址这四个功能不需要自己填写，从界
