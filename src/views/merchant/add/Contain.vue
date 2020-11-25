@@ -54,47 +54,54 @@ export default {
   },
   methods: {
     childMerchantFun(item) {
-      this.active++
+      console.log('childMerchantFun')
       console.log(item)
+      this.active++
     },
     // 营业信息
     childBusinessFun(arg) {
+      console.log('childBusinessFun')
+      console.log(arg)
       if (arg[1] === 2) {
         this.active--
       } else {
         this.active++
       }
-      console.log(arg)
     },
     // 经营信息
     childShopFun(arg) {
+      console.log('childShopFun')
+      console.log(arg)
       if (arg[1] === 2) {
         this.active--
       } else {
         this.active++
       }
-      console.log(arg)
     },
     // 法人信息
     childLegalFun(arg) {
+      console.log('childLegalFun')
+      console.log(arg)
       if (arg[1] === 2) {
         this.active--
       } else {
         this.active++
       }
-      console.log(arg)
     },
     // 开户信息
     childAccountFun(arg) {
+      console.log('childAccountFun')
+      console.log(arg)
       if (arg[1] === 2) {
         this.active--
       } else {
         this.active++
       }
-      console.log(arg)
     },
     // 联系人信息
     childContactsFun(arg) {
+      console.log('childContactsFun')
+      console.log(arg)
       if (arg[1] === 2) {
         this.active--
       } else {

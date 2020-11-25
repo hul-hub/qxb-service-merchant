@@ -50,7 +50,7 @@
         label="其他补充材料"
       ></upload>
       <div class="btn-con" style="margin: 16px">
-        <button class="btn pre-btn" @click="preTab">上一步</button>
+        <button class="btn pre-btn" type="button" @click="preTab">上一步</button>
         <button class="btn next-btn" type="submit">下一步</button>
       </div>
     </van-form>
@@ -146,9 +146,11 @@ export default {
       this.shopItem.serproagreementimg1 = value
     },
     onSubmit(values) {
+      console.log(33333333333);
       this.$emit('childShopFun', this.shopItem, 1)
     },
     preTab() {
+      console.log(222222222);
       this.$emit('childShopFun', this.shopItem, 2)
     },
   },

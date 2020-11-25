@@ -80,7 +80,7 @@
         label="银行卡正面"
       ></upload>
       <div class="btn-con" style="margin: 16px">
-        <button class="btn pre-btn" @click="preTab">上一步</button>
+        <button class="btn pre-btn" type="button" @click="preTab">上一步</button>
         <button class="btn next-btn" type="submit">下一步</button>
       </div>
     </van-form>
