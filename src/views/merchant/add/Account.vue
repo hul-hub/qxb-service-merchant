@@ -168,13 +168,13 @@ export default {
         accounttype: '', //账户类型
         accounttypeP: '',
         province: '', //省份
-        provinceP: '',
+        provinceP: '1',
         city: '', //城市
-        cityP: '',
+        cityP: '2',
         bankid: '', //开户银行
-        bankidP: '',
+        bankidP: '3',
         branchid: '', //开户银行支行
-        branchidP: '',
+        branchidP: '4',
         idcardtype: '', //	持卡人证件类型
         idcardtypeP: '',
         idcard: '', //	证件编号

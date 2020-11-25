@@ -58,6 +58,7 @@ export default {
         idvalidenddate: '-',
         conidfrontimg: '-', //身份证正面链接
         conidbackimg: '-', //身份证反面链接
+        iscontactstype: false, // 1-法人：false  2-负责人： true
       },
       showPicker: false,
       contactstypeList: [
@@ -70,6 +71,11 @@ export default {
     onConfirmPicker(item) {
       this.contactsItem.contactstype = item.value
       this.contactsItem.contactstypeP = item.label
+      if (item.value === '2') {
+        this.contactsItem.iscontactstype = true
+      } else {
+        this.contactsItem.iscontactstype = false
+      }
       this.showPicker = false
     },
     onSubmit(values) {

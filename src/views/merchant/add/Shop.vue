@@ -94,9 +94,9 @@ export default {
         otherimg1: '', // 	其它材料
         serproagreementimg: '-', // 	商户协议
         serproagreementimg1: '', // 	商户协议
-        serproagreementimg2: '-', // 	商户协议
-        serproagreementimg3: '-', // 	商户协议
-        serproagreementimg4: '-', // 	商户协议
+        serproagreementimg2: '', // 	商户协议
+        serproagreementimg3: '', // 	商户协议
+        serproagreementimg4: '', // 	商户协议
       },
       showPicker: false,
       merchanttypeList: [
